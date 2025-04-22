@@ -18,7 +18,7 @@ This is a web-based **Biodata Generator** built with **Flask (Python)** and **HT
 
 Here is a sample of the generated biodata PDF:
 
-![PDF Preview](Habibur_Saikh_biodata.pdf)
+![PDF Preview](XYZ_biodata.pdf)
 
 
 
