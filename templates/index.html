@@ -1,0 +1,138 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Generator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        .section-header {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            color: #2c3e50;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Biodata Information</h1>
+        <p>Fill in your details below and download your biodata as a PDF file.</p>
+        
+        <form action="/generate_pdf" method="post">
+            <h2 class="section-header">Personal Information</h2>
+            
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea id="address" name="address"></textarea>
+            </div>
+            
+            <h2 class="section-header">Education</h2>
+            <div class="form-group">
+                <label for="education">Educational Qualifications</label>
+                <textarea id="education" name="education" placeholder="List your degrees, institutions, years, etc."></textarea>
+            </div>
+            
+            <h2 class="section-header">Professional Experience</h2>
+            <div class="form-group">
+                <label for="experience">Work Experience</label>
+                <textarea id="experience" name="experience" placeholder="List your job positions, companies, durations, etc."></textarea>
+            </div>
+            
+            <h2 class="section-header">Skills</h2>
+            <div class="form-group">
+                <label for="skills">Skills & Competencies</label>
+                <textarea id="skills" name="skills" placeholder="List your technical skills, soft skills, etc."></textarea>
+            </div>
+            
+            <button type="submit">Generate & Download PDF</button>
+        </form>
+    </div>
+</body>
+</html>
